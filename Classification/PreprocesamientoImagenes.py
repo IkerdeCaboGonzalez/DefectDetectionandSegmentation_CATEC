@@ -21,7 +21,7 @@ def procesar_imagenes(ruta, image_size):
     extensiones_validas = ('.jpg', '.jpeg', '.png', '.tif', '.tiff')
     for archivo in os.listdir(ruta):
         if not archivo.lower().endswith(extensiones_validas):
-            continue  # Salta archivos que no son imágenes
+            continue  
         nombre_archivo = os.path.join(ruta, archivo)
         try:
             imagen = Image.open(nombre_archivo)
@@ -34,4 +34,5 @@ def procesar_imagenes(ruta, image_size):
         except (UnidentifiedImageError, OSError):
             print(f"Archivo no válido o corrupto: {nombre_archivo}")
             continue
+
     return np.array(contenedor)
