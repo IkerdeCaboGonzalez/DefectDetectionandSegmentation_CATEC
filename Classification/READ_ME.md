@@ -1,1 +1,1 @@
-
+In this script, we train a set of pretrained models (VGG16, ConvNeXt, ResNet18, and DenseNet) for defect detection (binary classification: defect/no defect). The models were trained to detect defects in component inspections carried out using computed tomography.
